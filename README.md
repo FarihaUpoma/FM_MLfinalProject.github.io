@@ -12,8 +12,8 @@ First, since procedure cost is a continuous variable, I used linear regression f
 First, I loaded the data, then for data pre-processing, I looked at our dependent variable for possible outlier, or discrepancy. From the histogram it is evident that there are lots of rows with values around 0 for this column. It may be possible that the cost information for those facilities are not present, or presented incorrectly. In any case, we have to get rid of them to find proper predictors.
 I filtered the column to keep values ranging from 18000.
 
-![cost before](https://github.com/[FarihaUpoma]/[FM_MLProject]/blob/[main]/cost_a.png?raw=true)
-![cost after](https://github.com/[FarihaUpoma]/[FM_MLProject]/blob/[main]/cost_b.png?raw=true)
+![cost before](https://github.com/FarihaUpoma/[FM_MLProject.github.io]/blob/[main]/cost_a.png?raw=true)
+![cost after](https://github.com/FarihaUpoma/[FM_MLProject.github.io]/blob/[main]/cost_b.png?raw=true)
 
 
 Next, I looked at the rating measures, I saw that the values are presented as how they stand against the national average. The possible values are the same, above, or below. Among them, a significant amount of rows consists of None value, so I needed to filter these out too.
