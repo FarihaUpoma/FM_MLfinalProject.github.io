@@ -11,8 +11,8 @@ First, since procedure cost is a continuous variable, I used linear regression f
 First, I loaded the data, then for data pre-processing, I looked at our dependent variable for possible outlier, or discrepancy. From the histogram it is evident that there are lots of rows with values around 0 for this column. It may be possible that the cost information for those facilities are not present, or presented incorrectly. In any case, we have to get rid of them to find proper predictors.
 I filtered the column to keep values ranging from 18000.
 
-![cost before](costa.png)
-![cost after](costb.png)
+![cost before](viz/costa.png)
+![cost after](viz/costb.png)
 
 Next, I looked at the rating measures, I saw that the values are presented as how they stand against the national average. The possible values are the same, above, or below. Among them, a significant amount of rows consists of None value, so I needed to filter these out too.
 The variables we are using as predictors are all categorical in nature. For linear regression using scikit-learn, we need to have number values in the predictors. So, I created dummy variables for the model.
@@ -52,10 +52,10 @@ Sequential feature selection is a greedy algorithm that selects the best feature
 Recursive feature elimination is another greedy algorithm that recursively removes features from the dataset until the desired number of features is selected. The algorithm starts with all the features and trains the model. It then removes the least significant feature and retrains the model until the desired number of features is reached. Recursive feature elimination is often used in high-dimensional datasets where the number of features is significant.
  
 ## Result
-![mae](mae.png)
-![mse](mse.png)
-![rmse](rmse.png)
-![rsq](rsq.png)
+![mae](viz/mae.png)
+![mse](viz/mse.png)
+![rmse](viz/rmse.png)
+![rsq](viz/rsq.png)
 
 We can see the scores of each model in Figure 2. We calculated the mean squared error (MSE), mean absolute error (MAE), root mean squared error (RMSE), and $R^2$ value. The LassoCV/L1 regularization method resulted in the lowest MSE and MAE values, with an $R^2$ value of 0.58. The Random forest feature selection method had the highest $R^2$ value of 0.93, indicating a better fit for the model.
 
@@ -64,9 +64,9 @@ However, we can see from the selected features that RF  picked 322 features, and
 ## Procedure cost VS Care cost and Care quality
 We also investigated relation among a procedure cost with its care cost and quality. The procedure cost is a continuous variable, and care cost and quality are categorical variable. First plot is a boxplot showing the distribution of procedure cost based on the other two variables. 2nd figure shows a heatmap which reveals a linear relationship among these variables. Which means as the care cost goes higher than national average and care quality gets better than national average, the procedure cost also increases.
 
-![violin plot](vio.png)
-![violin plot](vio.png)
-![heatmap](heat.png)
+![violin plot](viz/vio.png)
+![violin plot](viz/vio.png)
+![heatmap](viz/heat.png)
 
 Similar analysis can be done for the other procedures as well.
 
