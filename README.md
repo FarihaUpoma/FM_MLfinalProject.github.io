@@ -1,6 +1,8 @@
 # FM_MLfinalProject.github.io
 MAP 6114 Machine Learning UWF Final Project
 
+### Github Repo: https://github.com/FarihaUpoma/FM_MLfinalProjectCode.git
+
 I have worked on the hospital data from the CORGIS Dataset Project. This dataset provides hospitals performance measure information related to heart attack, emergency department care, preventive care, stroke care, and other conditions. The data is part of an Administration-wide effort to increase the availability and accessibility of information on quality, utilization, and costs for effective, informed decision-making.
  
 It has 24 columns, among which 4 are regarding location, 8 are related to various rating status, the rest are some information about heart attack, pneumonia and hip-knee procedures.
